@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GuessYou</title>
+</head>
+
+<body>
+    <br>
+    <center>
+        <h1>Add someone to GuessYou!</h1>
+        <br>
+        <input type="text" placeholder="Enter the full name of the person." id="inputName" class="inputbox">
+        <br>
+        <div class="row">
+            <button class="selectbutton" id="male">Click if you are male</button>
+            <button class="selectbutton" id="highschool">Click if you are in High School</button>
+            <button class="selectbutton" id="blackhair">Click if you have black hair</button>
+            <button class="selectbutton" id="height">Click if you are taller than 5'5</button>
+            <button class="selectbutton" id="french">Click if you have taken french as a language</button>
+            <button class="selectbutton" id="glasses">Click if you wear glasses</button>
+            <button class="selectbutton" id="100follows">Click if you have more than 100 followers on Instagram</button>
+        </div>
+
+        <button class="selectbutton" id="buttonAdd" style="background: rgba(255, 0, 0, 0.123);">Get code</button>
+        <br>
+        <p id="displayText"></p>
+        <button class="floatingactionbutton" id="FAB" onclick="moveToMainPage()">←</button>
+    </center>
+</body>
+
+<script>
+
+    var buttonAdd = document.getElementById('buttonAdd');
+    var inputName = document.getElementById('inputName');
+
+    var displayText = document.getElementById('displayText');
+    var fab = document.getElementById('FAB');
+
+    var buttonArray = [
+        maleButton = document.getElementById('male'),
+        highschoolButton = document.getElementById('highschool'),
+        blackhairButton = document.getElementById('blackhair'),
+        heightButton = document.getElementById('height'),
+        frenchButton = document.getElementById('french'),
+        glassesButton = document.getElementById('glasses'),
+        followsButton = document.getElementById('100follows'),
+    ];
+
+    for (let index = 0; index < buttonArray.length; index++) {
+        const element = buttonArray[index];
+        element.onclick = function () {
+            if (!element.classList.contains('selected')) {
+                element.classList.add('selected');
+            }
+            else {
+                element.classList.remove('selected');
+            }
+        }
+    }
+
+    var finalString = "new Person(true, true, true, false, true, true, false, 'Aaryan Patnaik'),";
+
+    buttonAdd.addEventListener('click', function () {
+        if (inputName.value != '') {
+            finalString = "new Person(" + returnMainString() + "'" + inputName.value + "'" + ')' + ',';
+            buttonAdd.style.width = '50%';
+            buttonAdd.innerHTML = "Copy the below code and send it to patnaikaaryan@gmail.com by email or @aaryanpatnaik on Instagram";
+            displayText.innerHTML = finalString;
+        }
+        else {
+            buttonAdd.innerHTML = "Enter the name."
+        }
+    });
+
+    function returnMainString() {
+        let mainString = '';
+        for (let index = 0; index < buttonArray.length; index++) {
+            const element = buttonArray[index];
+            mainString = mainString + checkIfTrue(element);
+        }
+        return mainString;
+    }
+
+    function checkIfTrue(element) {
+        let select;
+        if (element.classList.contains('selected')) {
+            select = true;
+        }
+        else {
+            select = false;
+        }
+        return select + ',' + ' ';
+    }
+
+    function moveToMainPage() {
+        window.location.href = "../index.htm";
+    }
+
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
+
+</html>

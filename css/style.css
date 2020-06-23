@@ -1,0 +1,323 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('../fonts/Roboto-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.ttf');
+}
+
+/* ELEMENTS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: black;
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+pre {
+    color: white;
+    font-family: 'Roboto';
+}
+
+h1 {
+    font-family: 'RobotoThin';
+}
+
+/* CLASSES */
+
+.mainbutton {
+    font-family: 'Roboto';
+    background-color: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 4%;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+.mainbutton:hover {
+    background-color: whitesmoke;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.mainbutton:focus {
+    outline: none;
+}
+
+.mainbutton.green {
+    font-family: 'Roboto';
+    background-color: rgb(106, 165, 106);
+    border: none;
+    color: white;
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 4%;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+.mainbutton:hover.green {
+    background-color: rgb(113, 168, 113);
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.mainbutton.red {
+    font-family: 'Roboto';
+    background-color: rgb(216, 101, 101);
+    border: none;
+    color: white;
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 4%;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+.mainbutton:hover.red {
+    background-color: rgb(214, 114, 114);
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.mainbutton:focus {
+    outline: none;
+}
+
+.hide {
+    display: none;
+}
+
+.card {
+    font-family: 'Roboto';
+    background-color: white;
+    border: none;
+    color: black;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    width: 400px; 
+    height: 200px;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+    font-size: 100%;
+    margin-top: 20px;
+}
+
+.card > p {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.card:focus {
+    outline: none;
+}
+
+.card > p {
+    margin-top: 85px;
+}
+
+.card > button {
+    margin-top: 85px;
+}
+
+.cardop {
+    background-color: white;
+    border: none;
+    color: black;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    width: 400px; 
+    height: 150px;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+    margin-left: 20px;
+    font-size: 100%;
+    margin-top: 20px;
+}
+
+.title {
+    font-family: 'RobotoThin';
+}
+
+a {
+    color: gray;
+}
+
+.inputbox {
+    height: 40px;
+    padding-top: 5px;
+    border-style: none none double none;
+    border-color: rgb(117, 117, 117);
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.inputbox:focus {
+    border-color: #111;
+}
+
+.inputbox::placeholder {
+    transition: all 0.3s;
+}
+
+.inputbox::after {
+    content: attr(data-placeholder);
+    pointer-events: none;
+    opacity: 1;
+}
+
+.inputbox:focus::placeholder {
+    transform: translateY(-20px);
+    color: #111;
+    transition: all 0.3s;
+}
+
+.selectbutton {
+    display: inline;
+    font-family: 'Roboto';
+    background-color: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 2%;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+.selectbutton:hover {
+    background-color: whitesmoke;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.selectbutton:focus {
+    outline: none;
+}
+
+.selectbutton.selected {
+    display: inline;
+    font-family: 'Roboto';
+    background-color: whitesmoke;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-top: 2%;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+}
+
+.selectbutton:hover.selected {
+    background-color: whitesmoke;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.selectbutton:focus.selected {
+    outline: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.floatingactionbutton {
+    background-color: #111;
+    border: none;
+    color: white;
+    width: 55px;
+    height: 55px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 200px;
+    transition: all 0.2s ease-in-out;
+    margin-right: 100px;
+    bottom: 100px;
+    right: 1vw;
+    position: fixed;
+    box-shadow: 30px 3px 5px #aaaaaa;
+    -moz-box-shadow: 30px 3px 5px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 5px #aaaaaa;
+    z-index: 5;
+}
+
+.floatingactionbutton:hover {
+    background-color: rgb(78, 78, 78);
+    transition: all 0.2s ease-in-out;
+}
+
+.floatingactionbutton:focus {
+    outline: none;
+}
