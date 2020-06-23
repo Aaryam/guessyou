@@ -100,8 +100,6 @@ noButton.onclick = function () {
 var personArray = [
     new Person(true, true, true, false, true, true, false, 'Aaryan Patnaik'),
     new Person(true, true, true, false, true, true, false, 'Aaman Patnaik'),
-    new Person(true, true, true, true, true, true, true, 'Baby Black Jesus'),
-    new Person(false, false, true, false, false, false, true, 'Preeti Patnaik'),
     // male, highschool, blackhair, tall, french, glasses, hundredFollows, name
 ]
 
