@@ -101,6 +101,7 @@ var personArray = [
     new Person(true, true, true, false, true, true, false, 'Aaryan Patnaik'),
     new Person(true, true, true, false, true, true, false, 'Aaman Patnaik'),
     new Person(true, true, true, false, false, true, false, 'Tirth Singh'),
+    new Person(false, true, true, true, false, true, false, 'Arya Patel'),
     // male, highschool, blackhair, tall, french, glasses, hundredFollows, name
 ]
 
