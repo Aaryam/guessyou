@@ -44,14 +44,14 @@ yesButton.addEventListener('click', function() {
     tempCounter++;
     if (tempCounter == questionList.length)
     {
-        displayText.innerHTML = 'Are you a sarcastic person?';
+        displayText.innerHTML = 'Is the person a sarcastic person?';
     }
 });
 noButton.addEventListener('click', function() {
     tempCounter++;
     if (tempCounter == questionList.length)
     {
-        displayText.innerHTML = 'Are you a sarcastic person?';
+        displayText.innerHTML = 'Is the person a sarcastic person?';
     }
 });
 
@@ -106,6 +106,8 @@ var personArray = [
     new Person(false, true, true, true, true, true, true, 'Amitagni Ghosh'),
     new Person(false, true, true, true, true, false, false, 'Nishika Parikshya'),
     new Person(false, true, false, false, false, false, true, 'Naba Mustafa'),
+    new Person(false, true, true, true, true, true, false, 'Samadrita Banerjee'),
+    new Person(false, true, true, false, false, true, true, 'Yashjyoti Bir'),
     // male, highschool, blackhair, tall, french, glasses, hundredFollows, name
 ]
 
